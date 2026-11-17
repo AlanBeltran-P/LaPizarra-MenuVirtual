@@ -24,6 +24,8 @@ img { display: block; max-width: 100%; }
 
 body:has(dialog[open]) { overflow: hidden; }
 
+[hidden] { display: none !important; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;

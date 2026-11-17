@@ -14,8 +14,15 @@
     (swipeLeft)="showNextCategory()"
     (swipeRight)="showPreviousCategory()"
   >
-    @if (visibleCategory(); as category) {
-      <app-category-section [category]="category" (productSelected)="openProduct($event)" />
+    @if (searchResults(); as results) {
+      <app-category-section [category]="results" (productSelected)="openProduct($event)" />
+    }
+    @for (category of data.categories; track category.id) {
+      <app-category-section
+        [category]="category"
+        [hidden]="!isShown(category)"
+        (productSelected)="openProduct($event)"
+      />
     }
   </main>
   <app-local-notes [notes]="data.notes" />

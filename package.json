@@ -16,7 +16,9 @@
     "@angular/core": "^22.2.0",
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
+    "@angular/platform-server": "^22.2.6",
     "@angular/router": "^22.2.0",
+    "@angular/ssr": "^22.2.7",
     "angularx-qrcode": "^22.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"

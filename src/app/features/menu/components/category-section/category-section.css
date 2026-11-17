@@ -28,6 +28,18 @@
   background: var(--color-red);
 }
 
+.category__title { animation: title-in 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+.category__title::after { animation: line-grow 0.5s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+@keyframes title-in {
+  from { opacity: 0; transform: translateX(-16px); }
+}
+
+@keyframes line-grow {
+  from { width: 0; }
+}
+
 .category__count {
   flex-shrink: 0;
   font-size: 0.8125rem;

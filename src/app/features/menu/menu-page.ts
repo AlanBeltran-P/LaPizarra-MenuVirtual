@@ -55,12 +55,15 @@ export class MenuPage {
     };
   });
 
-  protected readonly visibleCategory = computed(() => this.searchResults() ?? this.activeCategory());
-
   /** Mientras se busca, ninguna categoría queda marcada. */
   protected readonly activeNavId = computed(() =>
     this.searchResults() ? '' : (this.activeCategory()?.id ?? ''),
   );
+
+  /** Una categoría se ve si es la activa y no se está buscando. */
+  protected isShown(category: Category): boolean {
+    return !this.searchResults() && category.id === this.activeCategory()?.id;
+  }
 
   protected selectCategory(id: string): void {
     this.searchQuery.set('');

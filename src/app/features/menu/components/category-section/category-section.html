@@ -1,6 +1,6 @@
 <section class="category">
   <header class="category__header">
-    <h2 class="category__title" #title>{{ category().name }}</h2>
+    <h2 class="category__title">{{ category().name }}</h2>
     <span class="category__count">{{ countLabel() }}</span>
   </header>
 
@@ -11,7 +11,7 @@
   <div class="category__items">
     @for (item of category().items; track item.id) {
       <app-product-card
-        animate.enter="card-enter"
+        class="card-enter"
         [style.--i]="$index"
         [item]="item"
         (selected)="productSelected.emit(item)"
