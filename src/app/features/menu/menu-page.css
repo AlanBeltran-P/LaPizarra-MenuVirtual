@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: var(--space-6);
+}
+
+.catalog {
+  min-height: 60vh;
+  scroll-margin-top: var(--nav-height);
+}
+
+.menu-status {
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  color: var(--color-text-muted);
+}

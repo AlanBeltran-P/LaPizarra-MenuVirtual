@@ -1,0 +1,88 @@
+:host {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: block;
+}
+
+.category-nav {
+  position: relative;
+  background: var(--color-bg);
+}
+
+.category-nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, transparent, var(--color-bg));
+  pointer-events: none;
+}
+
+.category-nav__track {
+  position: relative;
+  padding: var(--space-3) var(--space-4);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-nav__track::-webkit-scrollbar { display: none; }
+
+.category-nav__rail {
+  position: relative;
+  width: max-content;
+}
+
+.category-nav__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  background: var(--color-red);
+  box-shadow: 0 4px 12px rgb(200 16 46 / 0.4);
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.65, 0, 0.35, 1),
+    width 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Destello que cruza la píldora cada pocos segundos */
+.category-nav__indicator::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.4) 50%, transparent 70%);
+  animation: pill-shine 3.5s ease-in-out infinite;
+}
+
+@keyframes pill-shine {
+  0%, 60% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.category-nav__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.chip {
+  white-space: nowrap;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.chip--active {
+  border-color: transparent;
+  background: transparent;
+  color: #fff;
+}

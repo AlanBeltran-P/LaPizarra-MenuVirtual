@@ -1,0 +1,5 @@
+@if (showImage()) {
+  <img class="product-image__img" [src]="item().image" [alt]="item().name" loading="lazy" (error)="onError()" />
+} @else {
+  <div class="product-image__placeholder" aria-hidden="true">{{ placeholder() }}</div>
+}

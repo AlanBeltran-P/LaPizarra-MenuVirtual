@@ -1,0 +1,44 @@
+<dialog #dialog class="modal" (close)="closed.emit()" (click)="closeOnBackdrop($event)">
+  @if (item(); as product) {
+    <article class="modal__content">
+      <button type="button" class="modal__close" aria-label="Cerrar" (click)="close()">✕</button>
+
+      <app-product-image class="modal__image" [item]="product" />
+
+      <div class="modal__body">
+        <h2 class="modal__name">{{ product.name }}</h2>
+
+        @if (glutenFree()) {
+          <app-gluten-free-badge />
+        }
+
+        @if (product.description) {
+          <p class="modal__description">{{ product.description }}</p>
+        }
+
+        @if (product.variants?.length) {
+          <h3 class="modal__subtitle">Opciones</h3>
+          <ul class="modal__variants">
+            @for (variant of product.variants; track variant) {
+              <li class="modal__variant">{{ variant }}</li>
+            }
+          </ul>
+        }
+
+        <ul class="modal__prices">
+          @for (price of product.prices; track $index) {
+            <li class="modal__price">
+              <span class="modal__price-label">{{ price.label ?? 'Precio' }}</span>
+              <span class="modal__price-amount">
+                {{ price.amount | arPrice }}
+                @if (price.unit) {
+                  <span class="modal__price-unit">{{ price.unit }}</span>
+                }
+              </span>
+            </li>
+          }
+        </ul>
+      </div>
+    </article>
+  }
+</dialog>

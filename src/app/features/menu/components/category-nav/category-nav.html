@@ -1,0 +1,23 @@
+<nav class="category-nav" aria-label="Categorías del menú">
+  <div class="category-nav__track" #track>
+    <div class="category-nav__rail">
+      <span class="category-nav__indicator" #indicator aria-hidden="true"></span>
+      <ul class="category-nav__list">
+        @for (category of categories(); track category.id) {
+          <li>
+            <button
+              type="button"
+              class="chip"
+              [class.chip--active]="category.id === activeId()"
+              [attr.data-id]="category.id"
+              [attr.aria-current]="category.id === activeId() ? 'true' : null"
+              (click)="categorySelected.emit(category.id)"
+            >
+              {{ category.name }}
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

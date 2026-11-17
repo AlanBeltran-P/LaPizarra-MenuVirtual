@@ -1,0 +1,66 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4) calc(var(--space-6) * 2);
+  text-align: center;
+}
+
+.footer__title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--color-red-dark);
+}
+
+.footer__text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.footer__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  overflow: hidden;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgb(200 16 46 / 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Mismo destello que la píldora de categorías */
+.footer__button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.35) 50%, transparent 70%);
+  animation: button-shine 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .footer__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgb(200 16 46 / 0.4);
+  }
+}
+
+.footer__button:active { transform: scale(0.97); }
+
+.footer__updated {
+  margin-top: var(--space-4);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes button-shine {
+  0%, 60% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

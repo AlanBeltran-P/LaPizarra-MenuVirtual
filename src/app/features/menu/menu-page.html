@@ -1,0 +1,29 @@
+@if (menu.hasValue()) {
+  @let data = menu.value();
+  <app-menu-header [local]="data.local" />
+  <app-search-box [(query)]="searchQuery" />
+  <app-category-nav
+    [categories]="data.categories"
+    [activeId]="activeNavId()"
+    (categorySelected)="selectCategory($event)"
+  />
+  <main
+    class="catalog"
+    #catalog
+    appSwipe
+    (swipeLeft)="showNextCategory()"
+    (swipeRight)="showPreviousCategory()"
+  >
+    @if (visibleCategory(); as category) {
+      <app-category-section [category]="category" (productSelected)="openProduct($event)" />
+    }
+  </main>
+  <app-local-notes [notes]="data.notes" />
+  <app-promo-banner [promotions]="data.promotions" />
+  <app-menu-footer [instagram]="data.local.instagram" [updatedAt]="data.updatedAt" />
+  <app-product-modal [item]="selectedProduct()" (closed)="onModalClosed()" />
+} @else if (menu.error()) {
+  <p class="menu-status">No pudimos cargar el menú. Probá recargar la página.</p>
+} @else {
+  <p class="menu-status">Cargando menú…</p>
+}

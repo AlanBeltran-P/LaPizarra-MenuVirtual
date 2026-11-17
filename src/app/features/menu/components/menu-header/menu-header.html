@@ -1,0 +1,14 @@
+<header class="header">
+  @if (!logoFailed()) {
+    <img
+      class="header__logo"
+      [src]="local().logo"
+      [alt]="local().name"
+      width="120"
+      height="120"
+      (error)="logoFailed.set(true)"
+    />
+  }
+  <h1 class="header__name" [class.visually-hidden]="!logoFailed()">{{ local().name }}</h1>
+  <p class="header__city">{{ local().city }} · Menú</p>
+</header>

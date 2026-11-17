@@ -1,0 +1,9 @@
+@for (promo of promotions(); track promo.id) {
+  <aside class="promo">
+    <span class="promo__icon" aria-hidden="true">%</span>
+    <div>
+      <p class="promo__title">{{ promo.title }}</p>
+      <p class="promo__text">{{ promo.description }}</p>
+    </div>
+  </aside>
+}

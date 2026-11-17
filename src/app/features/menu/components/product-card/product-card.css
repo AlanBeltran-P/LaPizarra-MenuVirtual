@@ -1,0 +1,140 @@
+:host { display: block; }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Destello de luz que cruza la tarjeta al pasar el mouse */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.card:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 0 3px rgb(200 16 46 / 0.35), var(--shadow-md);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+.card__media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__image { transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+.card__tag {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+}
+
+.card__more {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-red);
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card:hover::after {
+    transform: translateX(120%);
+    transition: transform 0.8s ease;
+  }
+
+  .card:hover .card__image { transform: scale(1.06); }
+
+  .card:hover .card__more {
+    transform: rotate(90deg);
+    background: var(--color-red);
+    color: #fff;
+  }
+}
+
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+.card__name {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.card__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-border);
+}
+
+.card__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.card__price-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.card__price-amount {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--color-red-dark);
+}
+
+.card__price-unit {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}

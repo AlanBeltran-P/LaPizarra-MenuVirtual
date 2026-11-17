@@ -1,0 +1,27 @@
+<button type="button" class="card" (click)="selected.emit()">
+  <div class="card__media">
+    <app-product-image class="card__image" [item]="item()" />
+    @if (glutenFree()) {
+      <app-gluten-free-badge class="card__tag" />
+    }
+    <span class="card__more" aria-hidden="true">+</span>
+  </div>
+
+  <div class="card__body">
+    <h3 class="card__name">{{ item().name }}</h3>
+
+    <ul class="card__prices">
+      @for (price of item().prices; track $index) {
+        <li class="card__price">
+          @if (price.label) {
+            <span class="card__price-label">{{ price.label }}</span>
+          }
+          <span class="card__price-amount">{{ price.amount | arPrice }}</span>
+          @if (price.unit) {
+            <span class="card__price-unit">{{ price.unit }}</span>
+          }
+        </li>
+      }
+    </ul>
+  </div>
+</button>

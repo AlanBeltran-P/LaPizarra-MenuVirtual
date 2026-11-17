@@ -1,0 +1,231 @@
+{
+  "local": {
+    "name": "Pizzarra",
+    "logo": "/Logo/logo-circle.png",
+    "city": "Pinamar",
+    "instagram": "lapizzarra_pinamar",
+    "theme": {
+      "primary": "#1F1F1F",
+      "accent": "#C8102E"
+    }
+  },
+  "updatedAt": "2026-10-01",
+  "notes": [
+    "Las ½ pizzas toman el precio de la de mayor valor.",
+    "Cubierto $1.200"
+  ],
+  "promotions": [
+    {
+      "id": "residentes-pinamar",
+      "title": "¿Sos de Pina?",
+      "description": "Presentando tu DNI con residencia en Pinamar, 10% de descuento abonando en efectivo."
+    }
+  ],
+  "categories": [
+    {
+      "id": "faina",
+      "name": "Fainá",
+      "items": [
+        { "id": "faina-tradicional", "name": "Fainá tradicional", "prices": [{ "amount": 6000 }] },
+        { "id": "fainazzeta", "name": "Fainazzeta con muzzarella", "prices": [{ "amount": 9000 }] },
+        { "id": "faina-parmesano", "name": "Fainá con queso parmesano y verdeo", "prices": [{ "amount": 8500 }] },
+        { "id": "faina-panceta", "name": "Fainá con panceta, verdeo y muzzarella", "prices": [{ "amount": 10000 }] },
+        { "id": "faina-rellena", "name": "Fainá rellena con jamón cocido, queso y huevo", "prices": [{ "amount": 11000 }] }
+      ],
+      "extrasTitle": "Dips",
+      "extras": [
+        { "name": "Emulsión de albahaca, sweet chilli, alioli", "amount": 3500, "unit": "c/u" }
+      ]
+    },
+    {
+      "id": "empanadas",
+      "name": "Empanadas",
+      "items": [
+        {
+          "id": "empanadas-comunes",
+          "name": "Empanadas",
+          "prices": [{ "amount": 4200, "unit": "c/u" }],
+          "variants": ["Jamón y queso", "Verdura con salsa blanca", "Queso y cebolla", "Queso azul, apio y nuez", "Humita"]
+        },
+        {
+          "id": "empanadas-especiales",
+          "name": "Empanadas especiales",
+          "prices": [{ "amount": 5000, "unit": "c/u" }],
+          "variants": ["Carne cortada a cuchillo", "Cheeseburger", "Pollo al verdeo", "Capresse con tomates secos", "Bondiola braseada"]
+        }
+      ]
+    },
+    {
+      "id": "pizzas-a-la-piedra",
+      "name": "Pizzas a la piedra",
+      "priceLabels": ["Grande", "Chica"],
+      "items": [
+        { "id": "pizza-1", "number": 1, "name": "Muzzarella, salsa de tomates", "prices": [{ "label": "Grande", "amount": 38500 }, { "label": "Chica", "amount": 33500 }] },
+        { "id": "pizza-2", "number": 2, "name": "Muzzarella, cherrys y aceite de oliva con albahaca La Toscana", "prices": [{ "label": "Grande", "amount": 40500 }, { "label": "Chica", "amount": 35500 }] },
+        { "id": "pizza-3", "number": 3, "name": "Muzzarella, jamón cocido, tomate", "description": "Ajo opcional", "prices": [{ "label": "Grande", "amount": 42000 }, { "label": "Chica", "amount": 36500 }] },
+        { "id": "pizza-4", "number": 4, "name": "Muzzarella, jamón cocido y morrones asados", "prices": [{ "label": "Grande", "amount": 44000 }, { "label": "Chica", "amount": 38500 }] },
+        { "id": "pizza-6", "number": 6, "name": "Muzzarella y provolone", "prices": [{ "label": "Grande", "amount": 46000 }, { "label": "Chica", "amount": 40000 }] },
+        { "id": "pizza-15", "number": 15, "name": "Muzzarella, panceta, cebolla morada y rúcula", "prices": [{ "label": "Grande", "amount": 44000 }, { "label": "Chica", "amount": 38500 }] },
+        { "id": "pizza-19", "number": 19, "name": "Muzzarella y pepperoni", "prices": [{ "label": "Grande", "amount": 46000 }, { "label": "Chica", "amount": 40000 }] }
+      ]
+    },
+    {
+      "id": "pizzas-blancas",
+      "name": "Pizzas blancas",
+      "priceLabels": ["Grande", "Chica"],
+      "items": [
+        { "id": "pizza-9", "number": 9, "name": "Muzzarella, panceta, albahaca, ajo", "prices": [{ "label": "Grande", "amount": 44000 }, { "label": "Chica", "amount": 38500 }] },
+        { "id": "pizza-13", "number": 13, "name": "Muzzarella, verdura, huevo duro y salsa blanca", "prices": [{ "label": "Grande", "amount": 44000 }, { "label": "Chica", "amount": 38500 }] },
+        { "id": "pizza-20", "number": 20, "name": "Muzzarella, queso azul y nueces", "prices": [{ "label": "Grande", "amount": 46000 }, { "label": "Chica", "amount": 40000 }] },
+        { "id": "pizza-22", "number": 22, "name": "Fugazzetta con muzzarella", "prices": [{ "label": "Grande", "amount": 40000 }, { "label": "Chica", "amount": 35000 }] },
+        { "id": "pizza-23", "number": 23, "name": "Fugazzetta con muzzarella y provolone", "prices": [{ "label": "Grande", "amount": 47500 }, { "label": "Chica", "amount": 41500 }] },
+        { "id": "pizza-25", "number": 25, "name": "Fugazzetta rellena con jamón y muzzarella", "prices": [{ "label": "Grande", "amount": 50500 }, { "label": "Chica", "amount": 44000 }] },
+        { "id": "pizza-26", "number": 26, "name": "Muzzarella, queso azul, parmesano y provolone", "prices": [{ "label": "Grande", "amount": 47500 }, { "label": "Chica", "amount": 41500 }] },
+        { "id": "pizza-27", "number": 27, "name": "Pan de pizza con pesto de albahaca y parmesano", "prices": [{ "amount": 16000 }] }
+      ]
+    },
+    {
+      "id": "pizzas-especiales",
+      "name": "Pizzas especiales",
+      "priceLabels": ["Grande", "Chica"],
+      "items": [
+        { "id": "pizza-5", "number": 5, "name": "Muzzarella, cheddar, panceta, BBQ", "prices": [{ "label": "Grande", "amount": 48500 }, { "label": "Chica", "amount": 42500 }] },
+        { "id": "pizza-8", "number": 8, "name": "Muzzarella, gouda ahumado y pesto", "prices": [{ "label": "Grande", "amount": 47500 }, { "label": "Chica", "amount": 41500 }] },
+        { "id": "pizza-11", "number": 11, "name": "Muzzarella, jamón crudo, brie, rúcula", "prices": [{ "label": "Grande", "amount": 54000 }, { "label": "Chica", "amount": 47000 }] },
+        { "id": "pizza-16", "number": 16, "name": "Muzzarella, vegetales asados", "prices": [{ "label": "Grande", "amount": 42000 }, { "label": "Chica", "amount": 37000 }] },
+        { "id": "pizza-17", "number": 17, "name": "Muzzarella, hongos de cultivo", "prices": [{ "label": "Grande", "amount": 46000 }, { "label": "Chica", "amount": 40500 }] },
+        { "id": "pizza-18", "number": 18, "name": "Muzzarella, salmón ahumado y rúcula", "prices": [{ "label": "Grande", "amount": 62000 }, { "label": "Chica", "amount": 54000 }] }
+      ],
+      "extrasTitle": "Adicionales para pizzas",
+      "extras": [
+        { "name": "Adicional especial: Jamón crudo", "amount": 10000 },
+        { "name": "Adicional simple: Tomate, rúcula, cebolla, jamón cocido", "amount": 4000 }
+      ]
+    },
+    {
+      "id": "calzones",
+      "name": "Calzones",
+      "items": [
+        { "id": "calzone-napolitano", "name": "Napolitano", "description": "Jamón, tomate, muzzarella, ajo", "prices": [{ "amount": 46000 }] },
+        { "id": "calzone-veggie", "name": "Veggie", "description": "Verdura, huevo, salsa blanca, muzzarella y parmesano", "prices": [{ "amount": 44000 }] }
+      ]
+    },
+    {
+      "id": "sin-tacc",
+      "name": "Sin TACC",
+      "items": [
+        { "id": "pizza-individual-sin-tacc", "name": "Pizza individual Muzzarella", "prices": [{ "amount": 20000 }], "tags": ["sin-tacc"] }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "name": "Ensaladas",
+      "note": "Sugerimos aliñar las ensaladas con Aceite de Oliva Extra La Toscana y Sal Genser reducida en sodio.",
+      "items": [
+        { "id": "ensalada-cesar", "name": "César", "description": "Pechuga de pollo grillada, parmesano, lechuga, croutons y aderezo césar", "prices": [{ "amount": 20000 }] },
+        { "id": "ensalada-campo", "name": "Campo", "description": "Mix hojas verdes, jamón cocido, cherry, queso tybo, huevo duro y choclo", "prices": [{ "amount": 17000 }] },
+        { "id": "ensalada-veggie", "name": "Veggie", "description": "Pera grillada, rúcula, queso azul, nueces crocantes y vinagreta de oliva extra y aceto La Toscana", "prices": [{ "amount": 18500 }] },
+        { "id": "ensalada-keto", "name": "Keto", "description": "Pollo, lechuga, cherry, palta, queso, huevo duro aderezado con vinagreta francesa", "prices": [{ "amount": 20000 }] }
+      ]
+    },
+    {
+      "id": "pastas",
+      "name": "Pastas",
+      "items": [
+        { "id": "noquis-fideos", "name": "Ñoquis de papa | Fideos al huevo", "prices": [{ "amount": 13500 }] },
+        { "id": "ravioles-ricota", "name": "Ravioles de ricota", "prices": [{ "amount": 16000 }] },
+        { "id": "caseritos-ternera", "name": "Caseritos de ternera y provolone", "prices": [{ "amount": 20000 }] },
+        { "id": "tortelli-calabaza", "name": "Tortelli de calabaza en masa verde", "prices": [{ "amount": 18000 }] },
+        { "id": "tortelli-nero-salmon", "name": "Tortelli nero de salmón", "prices": [{ "amount": 28000 }] },
+        { "id": "sorrentino-xl", "name": "Sorrentino XL de jamón y queso", "prices": [{ "amount": 20000 }] }
+      ],
+      "extrasTitle": "Y sus salsas",
+      "extras": [
+        { "name": "Manteca | Fileto | Crema | Rosa", "amount": 10000 },
+        { "name": "4 quesos | Bolognesa", "amount": 12000 },
+        { "name": "Mediterránea: Panceta, olivas negras, emulsión de albahaca", "amount": 13000 },
+        { "name": "Pizzarra: Jamón cocido, pollo, muzzarella y crema", "amount": 13000 },
+        { "name": "Del Bosque: Ragout de hongos y ternera", "amount": 16000 },
+        { "name": "Alfredo: Manteca, parmesano y crema de ajo", "amount": 12000 }
+      ]
+    },
+    {
+      "id": "postres",
+      "name": "Los Postres... ¡imperdibles!",
+      "items": [
+        { "id": "panqueque-manzana", "name": "Panqueque de manzana con helado", "prices": [{ "amount": 16000 }] },
+        { "id": "marquisse", "name": "Marquisse de chocolate Águila", "description": "Con helado de crema americana y dulce de leche tibio", "prices": [{ "amount": 14500 }] },
+        { "id": "affogato", "name": "Affogato", "description": "Helado de vainilla con café expresso", "prices": [{ "amount": 10500 }] },
+        { "id": "crema-catalana", "name": "Crema catalana con crocante de caramelo", "prices": [{ "amount": 9500 }] },
+        { "id": "panqueque-ddl", "name": "Panqueque de dulce de leche caramelizado", "prices": [{ "amount": 12000 }] },
+        { "id": "flan", "name": "Flan casero con dulce de leche", "prices": [{ "amount": 10000 }] },
+        { "id": "cremas-heladas", "name": "Cremas heladas", "description": "2 bochas", "prices": [{ "amount": 14000 }] }
+      ],
+      "extras": [
+        { "name": "Adicional crema o dulce de leche", "amount": 1000 }
+      ]
+    },
+    {
+      "id": "bebidas-sin-alcohol",
+      "name": "Bebidas sin alcohol",
+      "items": [
+        { "id": "lata-gaseosa-agua", "name": "Lata gaseosa / H2O / Agua con y sin gas", "prices": [{ "amount": 4800 }] },
+        { "id": "vaso-limonada", "name": "Vaso de limonada", "description": "Jengibre, menta y miel", "prices": [{ "amount": 6500 }] },
+        { "id": "limonada-litro", "name": "Limonada 1 litro", "description": "Jengibre, menta y miel", "prices": [{ "amount": 12000 }] },
+        { "id": "jugo-naranja", "name": "Jugo exprimido de naranja natural", "prices": [{ "amount": 6500 }] },
+        { "id": "corona-cero", "name": "Corona 0.0 sin alcohol", "prices": [{ "amount": 8000 }] }
+      ]
+    },
+    {
+      "id": "vinos",
+      "name": "Vinos",
+      "items": [
+        { "id": "salentein-reserva", "name": "Salentein Reserva", "variants": ["Malbec", "Sauvignon blanc"], "prices": [{ "amount": 24000 }] },
+        { "id": "salentein-reserva-375", "name": "Salentein Reserva Malbec 375cc", "prices": [{ "amount": 15000 }] },
+        { "id": "portillo", "name": "Portillo", "description": "Salentein", "variants": ["Malbec", "Sauvignon", "Blanco dulce"], "prices": [{ "amount": 13500 }] },
+        { "id": "portillo-375", "name": "Portillo Malbec 375cc", "description": "Salentein", "prices": [{ "amount": 7800 }] },
+        { "id": "padrillos", "name": "Padrillos", "description": "Ernesto Catena", "variants": ["Malbec", "Pinot Noir"], "prices": [{ "amount": 22500 }] },
+        { "id": "padrillos-rose", "name": "Padrillos Rosé", "description": "Ernesto Catena", "prices": [{ "amount": 21000 }] },
+        { "id": "familia-gascon", "name": "Familia Gascón", "description": "Escorihuela Gascón", "variants": ["Malbec", "Chardonnay"], "prices": [{ "amount": 14500 }] },
+        { "id": "conejo-verde", "name": "Conejo Verde", "variants": ["Malbec", "Rosé", "Chenin dulce"], "prices": [{ "amount": 14000 }] }
+      ]
+    },
+    {
+      "id": "espumantes",
+      "name": "Espumantes",
+      "items": [
+        { "id": "salentein-extra-brut", "name": "Salentein Extra Brut", "prices": [{ "amount": 23500 }] },
+        { "id": "salentein-brut-nature", "name": "Salentein Brut Nature", "prices": [{ "amount": 24000 }] },
+        { "id": "familia-gascon-extra-brut", "name": "Familia Gascón Extra Brut", "prices": [{ "amount": 21500 }] }
+      ]
+    },
+    {
+      "id": "cervezas",
+      "name": "Cervezas",
+      "items": [
+        { "id": "corona-porron", "name": "Corona porrón", "prices": [{ "amount": 9000 }] },
+        { "id": "stella-litro", "name": "Stella Artois rubia 1 litro", "prices": [{ "amount": 16000 }] },
+        { "id": "stella-lata", "name": "Stella Artois lata 473cc", "variants": ["Rubia", "Noir"], "prices": [{ "amount": 8000 }] },
+        { "id": "patagonia", "name": "Patagonia", "variants": ["Amber lager", "24.7", "IPA"], "prices": [{ "amount": 18000 }] }
+      ]
+    },
+    {
+      "id": "aperitivos-cocteles",
+      "name": "Aperitivos & cócteles",
+      "items": [
+        { "id": "trago-de-la-casa", "name": "#7167 Trago de la casa ¡Probalo!", "description": "Fernet Chola, Gin Apóstoles de rosa mosqueta, tónica", "prices": [{ "amount": 9000 }] },
+        { "id": "vermu-la-fuerza", "name": "Vermú La Fuerza + Soda", "variants": ["Sideral", "Rojo", "Blanco", "Primavera"], "prices": [{ "amount": 8500 }] },
+        { "id": "fernet-chola-tonic", "name": "Fernet Chola & tonic", "prices": [{ "amount": 9000 }] },
+        { "id": "fernet-branca-cola", "name": "Fernet Branca & cola", "prices": [{ "amount": 9000 }] },
+        { "id": "negroni", "name": "Negroni", "description": "Campari, gin, bitter", "prices": [{ "amount": 11000 }] },
+        { "id": "gancia", "name": "Gancia & pomelo / Tonic", "prices": [{ "amount": 7500 }] },
+        { "id": "gin-apostoles-tonic", "name": "Gin Apóstoles & Tonic", "variants": ["Rosa mosqueta", "Mate"], "prices": [{ "amount": 9500 }] },
+        { "id": "gin-importado-tonic", "name": "Gin importado & Tonic", "prices": [{ "amount": 12500 }] },
+        { "id": "campari-orange", "name": "Campari Orange", "prices": [{ "amount": 10000 }] },
+        { "id": "ramazzotti-tonic", "name": "Ramazzotti Tonic", "prices": [{ "amount": 10000 }] },
+        { "id": "ramazzotti-spritz", "name": "Ramazzotti Spritz", "prices": [{ "amount": 10000 }] },
+        { "id": "aperol-spritz", "name": "Aperol Spritz + Espumante", "prices": [{ "amount": 13000 }] }
+      ]
+    }
+  ]
+}

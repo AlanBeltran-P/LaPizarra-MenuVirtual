@@ -1,0 +1,24 @@
+.notes {
+  margin: var(--space-6) var(--space-4) 0;
+  padding: var(--space-4);
+  border-left: 4px solid var(--color-red);
+  border-radius: var(--radius);
+  background: var(--color-dark);
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.notes__title {
+  margin-bottom: var(--space-2);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgb(255 255 255 / 0.7);
+}
+
+.notes__item + .notes__item { margin-top: var(--space-1); }
+
+.notes__item::before {
+  content: '• ';
+  color: var(--color-red);
+}

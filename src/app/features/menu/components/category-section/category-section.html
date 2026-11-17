@@ -1,0 +1,42 @@
+<section class="category">
+  <header class="category__header">
+    <h2 class="category__title" #title>{{ category().name }}</h2>
+    <span class="category__count">{{ countLabel() }}</span>
+  </header>
+
+  @if (category().note) {
+    <p class="category__note">{{ category().note }}</p>
+  }
+
+  <div class="category__items">
+    @for (item of category().items; track item.id) {
+      <app-product-card
+        animate.enter="card-enter"
+        [style.--i]="$index"
+        [item]="item"
+        (selected)="productSelected.emit(item)"
+      />
+    } @empty {
+      <p class="category__empty">No encontramos productos que coincidan con tu búsqueda.</p>
+    }
+  </div>
+
+  @if (category().extras?.length) {
+    <div class="extras">
+      <h3 class="extras__title">{{ category().extrasTitle ?? 'Adicionales' }}</h3>
+      <ul>
+        @for (extra of category().extras; track extra.name) {
+          <li class="extras__item">
+            <span>{{ extra.name }}</span>
+            <span class="extras__amount">
+              {{ extra.amount | arPrice }}
+              @if (extra.unit) {
+                <span class="extras__unit">{{ extra.unit }}</span>
+              }
+            </span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</section>

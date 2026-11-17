@@ -1,0 +1,63 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  overflow: hidden;
+  padding: var(--space-6) var(--space-4);
+  border-radius: 0 0 24px 24px;
+  background: linear-gradient(160deg, var(--color-red), var(--color-red-dark));
+  color: #fff;
+  text-align: center;
+}
+
+/* Brillo que se desplaza lento por el fondo */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, rgb(255 255 255 / 0.18), transparent 40%);
+  animation: header-glow 10s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.header__logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  animation: pop-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.header__name {
+  position: relative;
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.header__city {
+  position: relative;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+  animation: slide-up 0.6s 0.25s ease-out both;
+}
+
+@keyframes header-glow {
+  from { transform: translate(-20%, -10%); }
+  to { transform: translate(25%, 15%); }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.6) rotate(-12deg); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}

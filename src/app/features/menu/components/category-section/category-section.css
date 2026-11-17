@@ -1,0 +1,108 @@
+.category { padding: var(--space-6) var(--space-4) 0; }
+
+.category__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.category__title {
+  position: relative;
+  padding-bottom: var(--space-2);
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+.category__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-red);
+}
+
+.category__count {
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.category__note {
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.category__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .category__items { grid-template-columns: repeat(3, 1fr); }
+}
+
+.category__empty {
+  grid-column: 1 / -1;
+  padding: var(--space-6) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.card-enter {
+  animation: card-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(min(var(--i), 8) * 50ms);
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+.extras {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-red);
+}
+
+.extras__title {
+  margin-bottom: var(--space-2);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-red-dark);
+}
+
+.extras__item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem;
+}
+
+.extras__item + .extras__item { border-top: 1px dashed var(--color-border); }
+
+.extras__amount {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-red-dark);
+}
+
+.extras__unit {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}

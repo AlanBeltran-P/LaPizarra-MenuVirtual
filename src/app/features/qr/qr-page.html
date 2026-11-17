@@ -1,0 +1,14 @@
+<main class="qr-page">
+  <h1 class="qr-page__title">Pizzarra</h1>
+  <p class="qr-page__hint">Escaneá para ver el menú</p>
+  <qrcode
+    [qrdata]="menuUrl"
+    [width]="280"
+    [margin]="2"
+    errorCorrectionLevel="M"
+    colorDark="#8b0a1e"
+    colorLight="#ffffff"
+  />
+  <p class="qr-page__url">{{ menuUrl }}</p>
+  <button type="button" class="qr-page__print" (click)="print()">Imprimir</button>
+</main>

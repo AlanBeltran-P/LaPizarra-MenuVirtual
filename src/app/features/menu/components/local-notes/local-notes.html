@@ -1,0 +1,8 @@
+<aside class="notes" aria-label="Condiciones del local">
+  <h2 class="notes__title">Para tener en cuenta</h2>
+  <ul>
+    @for (note of notes(); track note) {
+      <li class="notes__item">{{ note }}</li>
+    }
+  </ul>
+</aside>
